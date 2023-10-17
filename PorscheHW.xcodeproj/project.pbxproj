@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F66F8D02ADDDF6F006AC7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8CF2ADDDF6F006AC7FD /* AppDelegate.swift */; };
+		7F66F8D22ADDDF6F006AC7FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8D12ADDDF6F006AC7FD /* SceneDelegate.swift */; };
+		7F66F8D42ADDDF6F006AC7FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8D32ADDDF6F006AC7FD /* HomeViewController.swift */; };
+		7F66F8D92ADDDF70006AC7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F66F8D82ADDDF70006AC7FD /* Assets.xcassets */; };
+		7F66F8DC2ADDDF70006AC7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F66F8DA2ADDDF70006AC7FD /* LaunchScreen.storyboard */; };
+		7F66F8E72ADDDF70006AC7FD /* PorscheHWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */; };
+		7F66F8F12ADDDF70006AC7FD /* PorscheHWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */; };
+		7F66F8F32ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */; };
+		7F66F9072ADDE64B006AC7FD /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F9062ADDE64B006AC7FD /* Networking.swift */; };
+		7F66F9092ADDE80F006AC7FD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F9082ADDE80F006AC7FD /* HomeViewModel.swift */; };
+		7F66F90B2ADDEC07006AC7FD /* TopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F90A2ADDEC07006AC7FD /* TopicsModel.swift */; };
+		7F66F90D2ADDF872006AC7FD /* HomeImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F90C2ADDF872006AC7FD /* HomeImagesCollectionViewCell.swift */; };
+		7F66F9102ADE0570006AC7FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F90F2ADE0570006AC7FD /* UIImageExtension.swift */; };
+		7F66F9122ADE30A3006AC7FD /* LuckyImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F9112ADE30A3006AC7FD /* LuckyImageModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F66F8E32ADDDF70006AC7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F66F8C42ADDDF6F006AC7FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F66F8CB2ADDDF6F006AC7FD;
+			remoteInfo = PorscheHW;
+		};
+		7F66F8ED2ADDDF70006AC7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F66F8C42ADDDF6F006AC7FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F66F8CB2ADDDF6F006AC7FD;
+			remoteInfo = PorscheHW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F66F8CC2ADDDF6F006AC7FD /* PorscheHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorscheHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F66F8CF2ADDDF6F006AC7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F66F8D12ADDDF6F006AC7FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7F66F8D32ADDDF6F006AC7FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7F66F8D82ADDDF70006AC7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F66F8DB2ADDDF70006AC7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F66F8DD2ADDDF70006AC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheHWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWTests.swift; sourceTree = "<group>"; };
+		7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheHWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWUITests.swift; sourceTree = "<group>"; };
+		7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F66F9062ADDE64B006AC7FD /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		7F66F9082ADDE80F006AC7FD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7F66F90A2ADDEC07006AC7FD /* TopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsModel.swift; sourceTree = "<group>"; };
+		7F66F90C2ADDF872006AC7FD /* HomeImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F66F90F2ADE0570006AC7FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		7F66F9112ADE30A3006AC7FD /* LuckyImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyImageModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F66F8C92ADDDF6F006AC7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8DF2ADDDF70006AC7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8E92ADDDF70006AC7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F66F8C32ADDDF6F006AC7FD = {
+			isa = PBXGroup;
+			children = (
+				7F66F8CE2ADDDF6F006AC7FD /* PorscheHW */,
+				7F66F8E52ADDDF70006AC7FD /* PorscheHWTests */,
+				7F66F8EF2ADDDF70006AC7FD /* PorscheHWUITests */,
+				7F66F8CD2ADDDF6F006AC7FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F66F8CD2ADDDF6F006AC7FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F8CC2ADDDF6F006AC7FD /* PorscheHW.app */,
+				7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */,
+				7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F66F8CE2ADDDF6F006AC7FD /* PorscheHW */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F90E2ADE0558006AC7FD /* Extensions */,
+				7F66F9052ADDE62D006AC7FD /* Networking */,
+				7F66F9042ADDE616006AC7FD /* SectionDetail */,
+				7F66F9032ADDE4B9006AC7FD /* Home */,
+				7F66F8CF2ADDDF6F006AC7FD /* AppDelegate.swift */,
+				7F66F8D12ADDDF6F006AC7FD /* SceneDelegate.swift */,
+				7F66F8D82ADDDF70006AC7FD /* Assets.xcassets */,
+				7F66F8DA2ADDDF70006AC7FD /* LaunchScreen.storyboard */,
+				7F66F8DD2ADDDF70006AC7FD /* Info.plist */,
+			);
+			path = PorscheHW;
+			sourceTree = "<group>";
+		};
+		7F66F8E52ADDDF70006AC7FD /* PorscheHWTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */,
+			);
+			path = PorscheHWTests;
+			sourceTree = "<group>";
+		};
+		7F66F8EF2ADDDF70006AC7FD /* PorscheHWUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */,
+				7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */,
+			);
+			path = PorscheHWUITests;
+			sourceTree = "<group>";
+		};
+		7F66F8FF2ADDE42A006AC7FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F8D32ADDDF6F006AC7FD /* HomeViewController.swift */,
+				7F66F90C2ADDF872006AC7FD /* HomeImagesCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F66F9002ADDE433006AC7FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F9082ADDE80F006AC7FD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F66F9012ADDE43E006AC7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F90A2ADDEC07006AC7FD /* TopicsModel.swift */,
+				7F66F9112ADE30A3006AC7FD /* LuckyImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F66F9032ADDE4B9006AC7FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F9012ADDE43E006AC7FD /* Model */,
+				7F66F9002ADDE433006AC7FD /* ViewModel */,
+				7F66F8FF2ADDE42A006AC7FD /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7F66F9042ADDE616006AC7FD /* SectionDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SectionDetail;
+			sourceTree = "<group>";
+		};
+		7F66F9052ADDE62D006AC7FD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F9062ADDE64B006AC7FD /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7F66F90E2ADE0558006AC7FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F66F90F2ADE0570006AC7FD /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F66F8F62ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHW" */;
+			buildPhases = (
+				7F66F8C82ADDDF6F006AC7FD /* Sources */,
+				7F66F8C92ADDDF6F006AC7FD /* Frameworks */,
+				7F66F8CA2ADDDF6F006AC7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PorscheHW;
+			productName = PorscheHW;
+			productReference = 7F66F8CC2ADDDF6F006AC7FD /* PorscheHW.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F66F8E12ADDDF70006AC7FD /* PorscheHWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F66F8F92ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWTests" */;
+			buildPhases = (
+				7F66F8DE2ADDDF70006AC7FD /* Sources */,
+				7F66F8DF2ADDDF70006AC7FD /* Frameworks */,
+				7F66F8E02ADDDF70006AC7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F66F8E42ADDDF70006AC7FD /* PBXTargetDependency */,
+			);
+			name = PorscheHWTests;
+			productName = PorscheHWTests;
+			productReference = 7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F66F8EB2ADDDF70006AC7FD /* PorscheHWUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F66F8FC2ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWUITests" */;
+			buildPhases = (
+				7F66F8E82ADDDF70006AC7FD /* Sources */,
+				7F66F8E92ADDDF70006AC7FD /* Frameworks */,
+				7F66F8EA2ADDDF70006AC7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F66F8EE2ADDDF70006AC7FD /* PBXTargetDependency */,
+			);
+			name = PorscheHWUITests;
+			productName = PorscheHWUITests;
+			productReference = 7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F66F8C42ADDDF6F006AC7FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7F66F8CB2ADDDF6F006AC7FD = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					7F66F8E12ADDDF70006AC7FD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7F66F8CB2ADDDF6F006AC7FD;
+					};
+					7F66F8EB2ADDDF70006AC7FD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7F66F8CB2ADDDF6F006AC7FD;
+					};
+				};
+			};
+			buildConfigurationList = 7F66F8C72ADDDF6F006AC7FD /* Build configuration list for PBXProject "PorscheHW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F66F8C32ADDDF6F006AC7FD;
+			productRefGroup = 7F66F8CD2ADDDF6F006AC7FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */,
+				7F66F8E12ADDDF70006AC7FD /* PorscheHWTests */,
+				7F66F8EB2ADDDF70006AC7FD /* PorscheHWUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F66F8CA2ADDDF6F006AC7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F66F8DC2ADDDF70006AC7FD /* LaunchScreen.storyboard in Resources */,
+				7F66F8D92ADDDF70006AC7FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8E02ADDDF70006AC7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8EA2ADDDF70006AC7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F66F8C82ADDDF6F006AC7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F66F9122ADE30A3006AC7FD /* LuckyImageModel.swift in Sources */,
+				7F66F8D42ADDDF6F006AC7FD /* HomeViewController.swift in Sources */,
+				7F66F90D2ADDF872006AC7FD /* HomeImagesCollectionViewCell.swift in Sources */,
+				7F66F8D02ADDDF6F006AC7FD /* AppDelegate.swift in Sources */,
+				7F66F8D22ADDDF6F006AC7FD /* SceneDelegate.swift in Sources */,
+				7F66F9092ADDE80F006AC7FD /* HomeViewModel.swift in Sources */,
+				7F66F9072ADDE64B006AC7FD /* Networking.swift in Sources */,
+				7F66F90B2ADDEC07006AC7FD /* TopicsModel.swift in Sources */,
+				7F66F9102ADE0570006AC7FD /* UIImageExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8DE2ADDDF70006AC7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F66F8E72ADDDF70006AC7FD /* PorscheHWTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F66F8E82ADDDF70006AC7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F66F8F32ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift in Sources */,
+				7F66F8F12ADDDF70006AC7FD /* PorscheHWUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F66F8E42ADDDF70006AC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */;
+			targetProxy = 7F66F8E32ADDDF70006AC7FD /* PBXContainerItemProxy */;
+		};
+		7F66F8EE2ADDDF70006AC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */;
+			targetProxy = 7F66F8ED2ADDDF70006AC7FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F66F8DA2ADDDF70006AC7FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F66F8DB2ADDDF70006AC7FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F66F8F42ADDDF70006AC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F66F8F52ADDDF70006AC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F66F8F72ADDDF70006AC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PorscheHW/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F66F8F82ADDDF70006AC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PorscheHW/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F66F8FA2ADDDF70006AC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PorscheHW.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PorscheHW";
+			};
+			name = Debug;
+		};
+		7F66F8FB2ADDDF70006AC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PorscheHW.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PorscheHW";
+			};
+			name = Release;
+		};
+		7F66F8FD2ADDDF70006AC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PorscheHW;
+			};
+			name = Debug;
+		};
+		7F66F8FE2ADDDF70006AC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF9W64C86F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PorscheHW;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F66F8C72ADDDF6F006AC7FD /* Build configuration list for PBXProject "PorscheHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F66F8F42ADDDF70006AC7FD /* Debug */,
+				7F66F8F52ADDDF70006AC7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F66F8F62ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F66F8F72ADDDF70006AC7FD /* Debug */,
+				7F66F8F82ADDDF70006AC7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F66F8F92ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F66F8FA2ADDDF70006AC7FD /* Debug */,
+				7F66F8FB2ADDDF70006AC7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F66F8FC2ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F66F8FD2ADDDF70006AC7FD /* Debug */,
+				7F66F8FE2ADDDF70006AC7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F66F8C42ADDDF6F006AC7FD /* Project object */;
+}
