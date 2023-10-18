@@ -19,7 +19,7 @@ struct ApiCaller {
         guard let apiURL = Bundle.infoPlistValue(forKey: "CLIENT_ID") as? String else { return nil}
         completeURL += "?client_id=\(apiURL)"
         if let query = query {
-            completeURL += "&query=\(query)"
+            completeURL += query
         }
         guard let url = URL(string: completeURL) else { return nil }
         do {
@@ -34,9 +34,24 @@ struct ApiCaller {
     }
 }
 
-enum PathsUrl: String {
-    case topics = "/topics"
-    case lucky = "/photos/random"
+enum PathsUrl {
+    case topics
+    case lucky
+    case sectionDetail(id: String)
+    case photo(id: String)
+    
+    var pathId: String {
+        switch self {
+        case .topics:
+            return "/topics"
+        case .lucky:
+            return "/photos/random"
+        case .sectionDetail(let id):
+            return "/topics/\(id)/photos"
+        case .photo(let id):
+            return "/photos/\(id)"
+        }
+    }
 }
 
 extension Bundle {

@@ -55,50 +55,65 @@ final class HomeViewController: UIViewController {
         setupUI()
         Task {
             await viewModel.fetchMainImages()
-            mainImagesCollectionView.dataSource = self
-            mainImagesCollectionView.delegate = self
-            await viewModel.loadLuckyImage()
-            if let imagePath = viewModel.lucky?.urls?.small {
-                self.luckyiImageView.loadImageUsingCache(withUrl: imagePath)
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                if let imagePath = self.viewModel.lucky?.urls?.small {
-                    self.luckyiBack.loadImageUsingCache(withUrl: imagePath)
+            self.mainImagesCollectionView.reloadData()
+            if viewModel.topics?.count ?? 0 < 1 {
+                DispatchQueue.main.async {
+                    Tools.showAlert(title: "It done",
+                                    message: "you reached your limit of 50 requests per hour 😥", titleForTheAction: "Ok",
+                                    in: self,
+                                    titleForCancelAction: "") {}
                 }
             }
         }
         self.view.backgroundColor = .white
+        taskGetRandomImege()
+        mainImagesCollectionView.dataSource = self
+        mainImagesCollectionView.delegate = self
     }
 
-    override func viewWillLayoutSubviews() {
-        // cardView.center = view.center
+    private func taskGetRandomImege() {
+        Task {
+            if showingBack {
+                await viewModel.loadLuckyImage()
+                if let imagePath = self.viewModel.lucky?.urls?.small {
+                    self.luckyiImageView.loadImageUsingCache(withUrl: imagePath)
+                }
+            } else {
+                await viewModel.loadLuckyImage()
+                if let imagePath = viewModel.lucky?.urls?.small {
+                    self.luckyiBack.loadImageUsingCache(withUrl: imagePath)
+                }
+            }
+            if self.viewModel.lucky?.urls?.small.count ?? 0 < 1 {
+                DispatchQueue.main.async {
+                    Tools.showAlert(title: "It done",
+                                    message: "you reached your limit of 50 requests per hour 😥", titleForTheAction: "Ok",
+                                    in: self,
+                                    titleForCancelAction: "") {}
+                }
+            }
+        }
     }
 
     private func setupUI() {
         mainImagesCollectionView.backgroundColor = .white
-        mainImagesCollectionView.register(HomeImagesCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        mainImagesCollectionView.register(HomeImagesCollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
         mainImagesCollectionView.register(ContentCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "cellHeader")
         mainImagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mainImagesCollectionView)
         view.addSubview(randomImageButton)
         randomImageButton.addTarget(self, action: #selector(getLuck), for: .touchUpInside)
         cardView.addSubview(luckyiBack)
-        NSLayoutConstraint.activate([
-            luckyiBack.topAnchor.constraint(equalTo: cardView.topAnchor),
-            luckyiBack.leftAnchor.constraint(equalTo: cardView.leftAnchor),
-            luckyiBack.rightAnchor.constraint(equalTo: cardView.rightAnchor),
-            luckyiBack.bottomAnchor.constraint(equalTo: cardView.bottomAnchor)
-        ])
         view.addSubview(cardView)
         NSLayoutConstraint.activate([
             mainImagesCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             mainImagesCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             mainImagesCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            mainImagesCollectionView.heightAnchor.constraint(equalToConstant: view.frame.height / 3),
-            randomImageButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            randomImageButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -16),
-            randomImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            randomImageButton.heightAnchor.constraint(equalToConstant: 60)
+            mainImagesCollectionView.heightAnchor.constraint(equalToConstant: view.frame.height / HomeConstants.mainImageHeigth),
+            randomImageButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: HomeConstants.constraintView),
+            randomImageButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -HomeConstants.constraintView),
+            randomImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -HomeConstants.constraintView),
+            randomImageButton.heightAnchor.constraint(equalToConstant: HomeConstants.buttonHeigth)
         ])
         mainImagesCollectionView.contentInset.bottom = view.safeAreaInsets.bottom
         navigationItem.title = "Home"
@@ -110,7 +125,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func layout() -> UICollectionViewLayout {
-        return UICollectionViewCompositionalLayout {[weak self] sectionNumber, environment -> NSCollectionLayoutSection? in
+        return UICollectionViewCompositionalLayout { [weak self] sectionNumber, environment -> NSCollectionLayoutSection? in
             guard let self = self else { return nil }
             return self.createBasicTypeSection()
         }
@@ -143,11 +158,26 @@ final class HomeViewController: UIViewController {
     }
 
     private func addLuckyImage() {
+        if showingBack {
+            NSLayoutConstraint.activate([
+                luckyiImageView.topAnchor.constraint(equalTo: cardView.topAnchor),
+                luckyiImageView.leftAnchor.constraint(equalTo: cardView.leftAnchor),
+                luckyiImageView.rightAnchor.constraint(equalTo: cardView.rightAnchor),
+                luckyiImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                luckyiBack.topAnchor.constraint(equalTo: cardView.topAnchor),
+                luckyiBack.leftAnchor.constraint(equalTo: cardView.leftAnchor),
+                luckyiBack.rightAnchor.constraint(equalTo: cardView.rightAnchor),
+                luckyiBack.bottomAnchor.constraint(equalTo: cardView.bottomAnchor)
+            ])
+        }
         NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: mainImagesCollectionView.bottomAnchor, constant: 16),
-            cardView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            cardView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -16),
-            cardView.heightAnchor.constraint(equalToConstant: view.frame.height / 6)
+            cardView.topAnchor.constraint(equalTo: mainImagesCollectionView.bottomAnchor, constant: HomeConstants.constraintView),
+            cardView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: HomeConstants.constraintView),
+            cardView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -HomeConstants.constraintView),
+            cardView.heightAnchor.constraint(equalToConstant: view.frame.height / HomeConstants.randomImageHeight)
         ])
     }
 
@@ -161,14 +191,11 @@ final class HomeViewController: UIViewController {
         UIView.transition(from: showingSide,
                           to: hiddenSide,
                           duration: 0.7,
-                          options: UIView.AnimationOptions.transitionFlipFromRight,
-                          completion: nil)
-        
-        showingBack = !showingBack
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-          //  self.addLuckyImage()
+                          options: UIView.AnimationOptions.transitionFlipFromRight) { _ in
+            self.taskGetRandomImege()
+            self.addLuckyImage()
         }
-        
+        showingBack = !showingBack
     }
 }
 
@@ -178,22 +205,29 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? HomeImagesCollectionViewCell
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell",
+                                                        for: indexPath) as? HomeImagesCollectionViewCell
         myCell?.sectionImage = viewModel.topics?[indexPath.row]
         return myCell ?? UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("User tapped on item \(indexPath.row)")
+        let sectionDetailViewModel = SectionDetailViewModel(title: viewModel.topics?[indexPath.row].title ?? "",
+                                                            idCollection: viewModel.topics?[indexPath.row].slug ?? "")
+        let sectionDetailVC = SectionDetailViewController()
+        sectionDetailVC.viewModel = sectionDetailViewModel
+        self.show(sectionDetailVC, sender: nil)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if (kind == UICollectionView.elementKindSectionHeader) {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "cellHeader", for: indexPath) as? ContentCollectionViewHeader
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                             withReuseIdentifier: "cellHeader",
+                                                                             for: indexPath) as? ContentCollectionViewHeader
             headerView?.sectionNameLabel.text = "Collections"
             return headerView ?? UICollectionViewCell()
         }
-        fatalError()
+        return UICollectionReusableView()
     }
 }
 
