@@ -11,10 +11,12 @@ struct CollectionModel: Codable {
     let id, slug, description: String?
     let createdAt: String?
     let urls: Urls?
+    let width, height: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, slug, description
         case createdAt = "created_at"
         case urls
+        case width, height
     }
 }

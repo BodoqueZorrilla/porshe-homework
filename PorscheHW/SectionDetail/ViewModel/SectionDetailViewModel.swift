@@ -7,7 +7,14 @@
 
 import Foundation
 
-final class SectionDetailViewModel: NSObject {
+protocol SectionDetailViewModelProtocol: AnyObject {
+    var collectionDetail: [CollectionModel]? { get set }
+    var titleSection: String { get }
+    func fetchCollectionImages() async
+    func addMoreImages(page: Int) async
+}
+
+final class SectionDetailViewModel: SectionDetailViewModelProtocol {
     var collectionDetail: [CollectionModel]?
     private var apiCaller = ApiCaller()
     var titleSection: String

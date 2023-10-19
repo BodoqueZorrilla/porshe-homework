@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
-class PhotoDetailViewModel: NSObject {
+protocol PhotoViewModelProtocol: AnyObject {
+    var photoData: PhotoDetailModel? { get set }
+    func fetchImageData() async
+    func returnIconSize(size: Int) ->  UIImage.SymbolConfiguration
+}
+
+class PhotoDetailViewModel: PhotoViewModelProtocol {
     var photoData: PhotoDetailModel?
     private var apiCaller = ApiCaller()
     private var idPhoto: String

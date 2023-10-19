@@ -8,7 +8,6 @@
 import UIKit
 
 final class SectionDetailViewController: UIViewController {
-    
     var viewModel: SectionDetailViewModel?
     private var isLoading = false
     private var currentPage = 1
@@ -43,11 +42,9 @@ final class SectionDetailViewController: UIViewController {
             self.isLoading = true
             Task {
                 await self.viewModel?.addMoreImages(page: currentPage)
-                DispatchQueue.global().async {
-                    DispatchQueue.main.async {
-                        self.myCollectionView.reloadData()
-                        self.isLoading = false
-                    }
+                DispatchQueue.main.async {
+                    self.myCollectionView.reloadData()
+                    self.isLoading = false
                 }
             }
         }
@@ -108,7 +105,7 @@ extension SectionDetailViewController: UICollectionViewDataSource, UICollectionV
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == (viewModel?.collectionDetail?.count ?? 0) - 5 && !self.isLoading {
+        if indexPath.row == (viewModel?.collectionDetail?.count ?? 0) - 10 && !self.isLoading {
             loadData()
             currentPage += 1
         }
@@ -121,4 +118,3 @@ extension SectionDetailViewController: UICollectionViewDataSource, UICollectionV
         self.show(photoDetailVC, sender: nil)
     }
 }
-

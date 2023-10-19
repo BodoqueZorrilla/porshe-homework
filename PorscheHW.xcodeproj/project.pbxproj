@@ -12,9 +12,6 @@
 		7F66F8D42ADDDF6F006AC7FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8D32ADDDF6F006AC7FD /* HomeViewController.swift */; };
 		7F66F8D92ADDDF70006AC7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F66F8D82ADDDF70006AC7FD /* Assets.xcassets */; };
 		7F66F8DC2ADDDF70006AC7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F66F8DA2ADDDF70006AC7FD /* LaunchScreen.storyboard */; };
-		7F66F8E72ADDDF70006AC7FD /* PorscheHWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */; };
-		7F66F8F12ADDDF70006AC7FD /* PorscheHWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */; };
-		7F66F8F32ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */; };
 		7F66F9072ADDE64B006AC7FD /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F9062ADDE64B006AC7FD /* Networking.swift */; };
 		7F66F9092ADDE80F006AC7FD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F9082ADDE80F006AC7FD /* HomeViewModel.swift */; };
 		7F66F90B2ADDEC07006AC7FD /* TopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F66F90A2ADDEC07006AC7FD /* TopicsModel.swift */; };
@@ -25,6 +22,8 @@
 		7F96D3422AE05FB4004A5465 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96D3412AE05FB4004A5465 /* PhotoDetailViewController.swift */; };
 		7F96D3442AE05FC3004A5465 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96D3432AE05FC3004A5465 /* PhotoDetailViewModel.swift */; };
 		7F96D3462AE05FCD004A5465 /* PhotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96D3452AE05FCD004A5465 /* PhotoDetailModel.swift */; };
+		7F96D3482AE0A395004A5465 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96D3472AE0A395004A5465 /* HomeTests.swift */; };
+		7F96D34E2AE0A640004A5465 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F96D34D2AE0A640004A5465 /* home.json */; };
 		7FB861C32ADFA417006B354E /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB861C22ADFA417006B354E /* CollectionModel.swift */; };
 		7FB861C52ADFA784006B354E /* SectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB861C42ADFA784006B354E /* SectionDetailViewController.swift */; };
 		7FB861C72ADFA7E3006B354E /* SectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB861C62ADFA7E3006B354E /* SectionDetailViewModel.swift */; };
@@ -33,13 +32,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		7F66F8E32ADDDF70006AC7FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7F66F8C42ADDDF6F006AC7FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7F66F8CB2ADDDF6F006AC7FD;
-			remoteInfo = PorscheHW;
-		};
-		7F66F8ED2ADDDF70006AC7FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F66F8C42ADDDF6F006AC7FD /* Project object */;
 			proxyType = 1;
@@ -57,10 +49,6 @@
 		7F66F8DB2ADDDF70006AC7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F66F8DD2ADDDF70006AC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheHWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWTests.swift; sourceTree = "<group>"; };
-		7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheHWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWUITests.swift; sourceTree = "<group>"; };
-		7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheHWUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F66F9062ADDE64B006AC7FD /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		7F66F9082ADDE80F006AC7FD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7F66F90A2ADDEC07006AC7FD /* TopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsModel.swift; sourceTree = "<group>"; };
@@ -71,6 +59,8 @@
 		7F96D3412AE05FB4004A5465 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		7F96D3432AE05FC3004A5465 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 		7F96D3452AE05FCD004A5465 /* PhotoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailModel.swift; sourceTree = "<group>"; };
+		7F96D3472AE0A395004A5465 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		7F96D34D2AE0A640004A5465 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 		7FB861C22ADFA417006B354E /* CollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
 		7FB861C42ADFA784006B354E /* SectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailViewController.swift; sourceTree = "<group>"; };
 		7FB861C62ADFA7E3006B354E /* SectionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailViewModel.swift; sourceTree = "<group>"; };
@@ -92,13 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F66F8E92ADDDF70006AC7FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,7 +90,6 @@
 			children = (
 				7F66F8CE2ADDDF6F006AC7FD /* PorscheHW */,
 				7F66F8E52ADDDF70006AC7FD /* PorscheHWTests */,
-				7F66F8EF2ADDDF70006AC7FD /* PorscheHWUITests */,
 				7F66F8CD2ADDDF6F006AC7FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,7 +99,6 @@
 			children = (
 				7F66F8CC2ADDDF6F006AC7FD /* PorscheHW.app */,
 				7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */,
-				7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,18 +124,10 @@
 		7F66F8E52ADDDF70006AC7FD /* PorscheHWTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F66F8E62ADDDF70006AC7FD /* PorscheHWTests.swift */,
+				7F96D34C2AE0A633004A5465 /* Mocks */,
+				7F96D3472AE0A395004A5465 /* HomeTests.swift */,
 			);
 			path = PorscheHWTests;
-			sourceTree = "<group>";
-		};
-		7F66F8EF2ADDDF70006AC7FD /* PorscheHWUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7F66F8F02ADDDF70006AC7FD /* PorscheHWUITests.swift */,
-				7F66F8F22ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift */,
-			);
-			path = PorscheHWUITests;
 			sourceTree = "<group>";
 		};
 		7F66F8FF2ADDE42A006AC7FD /* View */ = {
@@ -261,6 +234,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7F96D34C2AE0A633004A5465 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7F96D34D2AE0A640004A5465 /* home.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		7FB861BF2ADFA270006B354E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +283,8 @@
 			dependencies = (
 			);
 			name = PorscheHW;
+			packageProductDependencies = (
+			);
 			productName = PorscheHW;
 			productReference = 7F66F8CC2ADDDF6F006AC7FD /* PorscheHW.app */;
 			productType = "com.apple.product-type.application";
@@ -324,24 +307,6 @@
 			productReference = 7F66F8E22ADDDF70006AC7FD /* PorscheHWTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7F66F8EB2ADDDF70006AC7FD /* PorscheHWUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7F66F8FC2ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWUITests" */;
-			buildPhases = (
-				7F66F8E82ADDDF70006AC7FD /* Sources */,
-				7F66F8E92ADDDF70006AC7FD /* Frameworks */,
-				7F66F8EA2ADDDF70006AC7FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7F66F8EE2ADDDF70006AC7FD /* PBXTargetDependency */,
-			);
-			name = PorscheHWUITests;
-			productName = PorscheHWUITests;
-			productReference = 7F66F8EC2ADDDF70006AC7FD /* PorscheHWUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -359,10 +324,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 7F66F8CB2ADDDF6F006AC7FD;
 					};
-					7F66F8EB2ADDDF70006AC7FD = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 7F66F8CB2ADDDF6F006AC7FD;
-					};
 				};
 			};
 			buildConfigurationList = 7F66F8C72ADDDF6F006AC7FD /* Build configuration list for PBXProject "PorscheHW" */;
@@ -374,13 +335,14 @@
 				Base,
 			);
 			mainGroup = 7F66F8C32ADDDF6F006AC7FD;
+			packageReferences = (
+			);
 			productRefGroup = 7F66F8CD2ADDDF6F006AC7FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */,
 				7F66F8E12ADDDF70006AC7FD /* PorscheHWTests */,
-				7F66F8EB2ADDDF70006AC7FD /* PorscheHWUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,13 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F66F8EA2ADDDF70006AC7FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7F96D34E2AE0A640004A5465 /* home.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,16 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F66F8E72ADDDF70006AC7FD /* PorscheHWTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F66F8E82ADDDF70006AC7FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7F66F8F32ADDDF70006AC7FD /* PorscheHWUITestsLaunchTests.swift in Sources */,
-				7F66F8F12ADDDF70006AC7FD /* PorscheHWUITests.swift in Sources */,
+				7F96D3482AE0A395004A5465 /* HomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,11 +407,6 @@
 			isa = PBXTargetDependency;
 			target = 7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */;
 			targetProxy = 7F66F8E32ADDDF70006AC7FD /* PBXContainerItemProxy */;
-		};
-		7F66F8EE2ADDDF70006AC7FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7F66F8CB2ADDDF6F006AC7FD /* PorscheHW */;
-			targetProxy = 7F66F8ED2ADDDF70006AC7FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -688,42 +630,6 @@
 			};
 			name = Release;
 		};
-		7F66F8FD2ADDDF70006AC7FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DF9W64C86F;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PorscheHW;
-			};
-			name = Debug;
-		};
-		7F66F8FE2ADDDF70006AC7FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DF9W64C86F;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bodoque.PorscheHWUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PorscheHW;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,15 +656,6 @@
 			buildConfigurations = (
 				7F66F8FA2ADDDF70006AC7FD /* Debug */,
 				7F66F8FB2ADDDF70006AC7FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7F66F8FC2ADDDF70006AC7FD /* Build configuration list for PBXNativeTarget "PorscheHWUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F66F8FD2ADDDF70006AC7FD /* Debug */,
-				7F66F8FE2ADDDF70006AC7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

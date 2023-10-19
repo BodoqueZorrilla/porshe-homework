@@ -8,8 +8,7 @@
 import UIKit
 
 final class SectionDetailCollectionViewCell: UICollectionViewCell {
-    
-    let sectionImageView: UIImageView = {
+    private let sectionImageView: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -24,14 +23,12 @@ final class SectionDetailCollectionViewCell: UICollectionViewCell {
         addViews()
     }
 
-    func addViews(){
+    private func addViews(){
         NSLayoutConstraint.activate([
             sectionImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             sectionImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            sectionImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            sectionImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            sectionImageView.heightAnchor.constraint(equalToConstant: contentView.frame.height),
-            sectionImageView.widthAnchor.constraint(equalToConstant: contentView.frame.width)
+            sectionImageView.heightAnchor.constraint(equalToConstant: 90),
+            sectionImageView.widthAnchor.constraint(equalToConstant: 90)
         ])
     }
 

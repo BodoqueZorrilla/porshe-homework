@@ -7,7 +7,14 @@
 
 import Foundation
 
-class HomeViewModel: NSObject {
+protocol HomeViewModelProtocol: AnyObject {
+    var topics: [TopicsModel]? { get set }
+    var lucky: LuckyImageModel? { get set }
+    func fetchMainImages() async
+    func loadLuckyImage() async
+}
+
+class HomeViewModel: HomeViewModelProtocol {
     var topics: [TopicsModel]?
     private var apiCaller = ApiCaller()
     var lucky: LuckyImageModel?

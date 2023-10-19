@@ -8,7 +8,7 @@
 import UIKit
 
 final class HomeImagesCollectionViewCell: UICollectionViewCell {
-    let sectionImageView: UIImageView = {
+    lazy private var sectionImageView: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +16,7 @@ final class HomeImagesCollectionViewCell: UICollectionViewCell {
         return img
     }()
 
-    let nameLabel: UILabel = {
+    lazy private var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .white
@@ -26,7 +26,7 @@ final class HomeImagesCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    let stackView: UIStackView = {
+    lazy private var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis  = .vertical
         sv.alignment = .center
@@ -42,7 +42,7 @@ final class HomeImagesCollectionViewCell: UICollectionViewCell {
         addViews()
     }
 
-    func addViews(){
+    private func addViews(){
         addSubview(stackView)
         
         stackView.addArrangedSubview(sectionImageView)
