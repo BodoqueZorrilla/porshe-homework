@@ -23,17 +23,12 @@ final class HomeTests: XCTestCase {
     
     func test_FetchData() async throws {
         await sut.fetchMainImages()
-        if let url = Bundle.main.url(forResource: "home", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([TopicsModel].self, from: data)
-                XCTAssertNotNil(jsonData)
-                XCTAssertEqual(sut.topics?.count, 1)
-            } catch {
-                XCTFail("Error info: \(error)")
-            }
-        }
-        
+        XCTAssertNotNil(sut.topics)
+        XCTAssertTrue(sut.topics?.count ?? 0 > 0)
+    }
+
+    func test_FetchImage() async throws {
+        await sut.loadLuckyImage()
+        XCTAssertNotNil(sut.lucky)
     }
 }
